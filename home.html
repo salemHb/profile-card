@@ -29,7 +29,7 @@
         }
 
         .card {
-            background: linear-gradient(135deg,#cff5eb, #ceccdb);
+            background: linear-gradient(135deg,#c3ebe0, #cecbe4);
             color: #fff;
             border-radius: 15px;
             padding: 2rem;
@@ -139,7 +139,7 @@
             display: none;
         }
         .utc-time {
-            color: #666;
+            color: #000000;
             font-size: 0.9rem;
             margin-top: 1rem;
         }
@@ -218,7 +218,12 @@
             
             const utcElement = document.querySelector('[data-testid="currentTimeUTC"]');
             utcElement.textContent = new Date().toLocaleString('en-US', options) + ' (Nairobi Time)';
+            console.log(updateUTCTime);
         }
+
+         // Update time immediately and every second
+        updateUTCTime();
+        setInterval(updateUTCTime, 1000);
     </script>
 </body>
 </html>
